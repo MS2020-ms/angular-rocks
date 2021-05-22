@@ -10,7 +10,10 @@ export interface RockBand {
   country: string;
   web: string;
   active: boolean;
-  origin: strt
+  origin: string;
+  genres: string;
+  years: string;
+  description: string;
 }
 
 @Injectable({

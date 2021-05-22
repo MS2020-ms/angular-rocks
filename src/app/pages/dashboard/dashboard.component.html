@@ -2,7 +2,7 @@
     <div class="band-card">
         <div class="card">
             <h2 class="band-name">{{bandSelected?.name}}</h2>
-            <img [src]="bandSelected?.img">
+            <img [src]="bandSelected?.img" title={{bandSelected?.description}}>
             <p><b>Members:</b> {{bandSelected?.members}}</p>
             <p><b>Origin: </b> {{bandSelected?.origin}}</p>
             <p><b>Genres: </b> {{bandSelected?.genres}}</p>
