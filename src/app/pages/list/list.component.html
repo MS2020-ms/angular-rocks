@@ -10,7 +10,7 @@
 </div>
 
 <h1 class="title">My favorite Rock Bands</h1>
-<div class="bands">
+<div class="bands mb-4">
     <div class="band" *ngFor="let band of arrRockBands" [routerLink]="['/list', band.id]">
         <h2 class="band-name">{{band.name}}</h2>
         <img [src]="band.img">
