@@ -1,0 +1,44 @@
+<footer class=" bg-dark page-footer font-small blue pt-4">
+    <div class="container">
+
+        <div class="container-fluid text-center text-md-left" id="contacto">
+            <div class="row">
+                <div class="col-md-4 mt-md-0 mt-3">
+                    <p class="text-uppercase">servicios</p>
+                    <p><a class="enlace" [routerLink]="['/dashboard']">Rocks Band List</a></p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-1">
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <p class="text-uppercase">Redes</p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#!"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#!"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#!"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-1">
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <p class="text-uppercase">Contacto <i class="far fa-envelope"></i></p>
+                    <address>
+                        <a [routerLink]="['mailto:contacto@example.com']">info@angularrocks.com</a><br>
+                        Address:<br>
+                        C/Example,sn<br>
+                        Madrid
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© Angular Rocks 2020 | Author: Miguel Soto |
+            <a href="https://kubide.es/" class="ml-2"> Kubide</a>
+        </div>
+    </div>
+</footer>
