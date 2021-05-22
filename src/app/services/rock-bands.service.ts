@@ -14,6 +14,7 @@ export interface RockBand {
   genres: string;
   years: string;
   description: string;
+  video: string;
 }
 
 @Injectable({

@@ -1,3 +1,14 @@
+<div class="row animated fadeIn fast">
+    <div class="col-12">
+
+        <div class="card-body">
+            <input type="text" id="input" class="form-control" placeholder="Search a Band...[case-sensitive]"
+                #txtTermino (keyup)="buscar(txtTermino.value)" />
+        </div>
+
+    </div>
+</div>
+
 <h1 class="title">My favorite Rock Bands</h1>
 <div class="bands">
     <div class="band" *ngFor="let band of arrRockBands" [routerLink]="['/list', band.id]">

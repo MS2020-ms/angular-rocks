@@ -35,3 +35,9 @@ img{
 .country img{
     margin: 0%;
 }
+iframe{
+width: 95%;
+height: 50%;
+margin-bottom: 5px;
+margin-left: 2%;
+}

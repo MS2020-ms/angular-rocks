@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RockBand, RockBandsService } from '../../services/rock-bands.service';
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-list',
@@ -10,7 +11,7 @@ export class ListComponent implements OnInit {
 
   arrRockBands: RockBand[];
 
-  constructor(private rockBandsService: RockBandsService) { }
+  constructor(private rockBandsService: RockBandsService, private searchsService: SearchService) { }
 
   ngOnInit(): void {
     this.rockBandsService.getAll()
@@ -18,6 +19,25 @@ export class ListComponent implements OnInit {
         this.arrRockBands = rockBands;
       })
       .catch(error => console.log(error));
+  }
+
+  buscar(termino: string) {
+    //console.log(termino);
+
+    if (termino.length === 0) {
+      return this.rockBandsService.getAll()
+        .then(rockBands => {
+          this.arrRockBands = rockBands;
+        })
+        .catch(error => console.log(error));
+    }
+
+    this.searchsService.search(termino)
+      .then(rockBand => {
+        this.arrRockBands = rockBand;
+      })
+      .catch(error => console.log(error));
+
   }
 
 }
