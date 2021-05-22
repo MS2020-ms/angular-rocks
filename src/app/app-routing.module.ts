@@ -6,7 +6,6 @@ import { Error404Component } from './pages/error404/error404.component';
 //Modules
 import { PagesRoutingModule } from './pages/pages.routing';
 
-
 const routes: Routes = [
   { path: '', redirectTo: '/list', pathMatch: 'full' },
   { path: 'new', component: AddBandComponent },

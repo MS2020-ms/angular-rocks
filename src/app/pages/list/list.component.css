@@ -22,6 +22,10 @@
     height: 8rem;
     cursor: pointer;
 }
+.band img:hover{
+    transform: scale(0.95);
+    box-shadow: 5px 6px 8px 1px gray;
+}
 .band-name{
     text-align: center;
     /* font-weight: bold; */
