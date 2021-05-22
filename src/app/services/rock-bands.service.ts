@@ -36,4 +36,8 @@ export class RockBandsService {
     });
   }
 
+  addBand(pBand: RockBand) {
+
+  }
+
 }

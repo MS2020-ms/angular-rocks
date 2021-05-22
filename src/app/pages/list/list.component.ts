@@ -40,4 +40,16 @@ export class ListComponent implements OnInit {
 
   }
 
+  onClick(pId) {
+
+    alert("Are you sure?\nYou won't be able to revert this!");
+
+    for (let i = 0; i < this.arrRockBands.length; i++) {
+      if (this.arrRockBands[i].id === pId) {
+        this.arrRockBands.splice(i, 1);
+      }
+    }
+  }
+
+
 }

@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
 
 //Modules
-import { SharedModule } from '../shared/shared.module';
+
 
 //Components
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -13,6 +13,7 @@ import { Error404Component } from './error404/error404.component';
 import { ListComponent } from './list/list.component';
 import { PagesComponent } from './pages.component';
 import { AddBandComponent } from './add-band/add-band.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AddBandComponent } from './add-band/add-band.component';
     BrowserModule,
     CommonModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ]
 })
 

@@ -6,7 +6,7 @@ export const ROCKBANDS: RockBand[] = [
     {
         // id: uuidv4(),
         id: 1,
-        name: 'The Rolling Stones',
+        name: 'Rolling Stones',
         members: [
             ' Mick Jagger',
             ' Keith Richards',
