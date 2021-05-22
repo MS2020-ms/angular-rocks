@@ -9,7 +9,8 @@ export interface RockBand {
   icon: string;
   country: string;
   web: string;
-  active: boolean
+  active: boolean;
+  origin: strt
 }
 
 @Injectable({
@@ -24,4 +25,11 @@ export class RockBandsService {
       resolve(ROCKBANDS);
     });
   }
+
+  getById(pId: number): Promise<RockBand> {
+    return new Promise((resolve, reject) => {
+      resolve(ROCKBANDS.find(band => band.id === pId));
+    });
+  }
+
 }

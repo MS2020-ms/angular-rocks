@@ -1,21 +1,26 @@
-<div class="bands">
-    <div class="band" *ngFor="let band of arrRockBands" [routerLink]="['/band', band.id, 'albums']">
-        <h2 class="band-name">{{band.name}}</h2>
-        <img [src]="band.img">
-        <div class="country d-flex justify-content-between align-items-baseline">
-            <p>{{band.country}}</p>
+<div class="cointainer">
+    <div class="band-card">
+        <div class="card">
+            <h2 class="band-name">{{bandSelected?.name}}</h2>
+            <img [src]="bandSelected?.img">
+            <p><b>Members:</b> {{bandSelected?.members}}</p>
+            <p><b>Origin: </b> {{bandSelected?.origin}}</p>
+            <p><b>Genres: </b> {{bandSelected?.genres}}</p>
+            <p><b>Active years: </b> {{bandSelected?.years}}</p>
+            <p><b>Website: </b><a href={{bandSelected?.web}}>{{bandSelected?.web}}</a> </p>
+            <div class="country">
+                <p>{{bandSelected?.country}}</p>
 
-            <div class="img-flag" [ngSwitch]="band.country">
-                <img src="../../../assets/images/flags/UK_flag.png" *ngSwitchCase="'United Kingdom'"
-                    style="transform: scale(0.2); height: 100px;">
-                <img src="../../../assets/images/flags/USA_flag.jpg" *ngSwitchCase="'United States'"
-                    style="transform: scale(0.2); height: 100px;">
-                <img src="../../../assets/images/flags/AU_flag.png" *ngSwitchCase="'Australia'"
-                    style="transform: scale(0.2); height: 100px;">
+                <div class="img-flag" [ngSwitch]="bandSelected?.country">
+                    <img src="../../../assets/images/flags/UK_flag.png" title="British Flag"
+                        *ngSwitchCase="'United Kingdom'" style="transform: scale(0.2); height: 100px;">
+                    <img src="../../../assets/images/flags/USA_flag.jpg" title="USA Flag"
+                        *ngSwitchCase="'United States'" style="transform: scale(0.2); height: 100px;">
+                    <img src="../../../assets/images/flags/AU_flag.png" title="Australian Flag"
+                        *ngSwitchCase="'Australia'" style="transform: scale(0.2); height: 100px;">
+                </div>
+
             </div>
-
         </div>
-        <p>{{band.members}}</p>
-        <p>{{band.id}}</p>
     </div>
 </div>

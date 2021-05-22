@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RockBand, RockBandsService } from '../../services/rock-bands.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  arrRockBands: RockBand[];
+
+  constructor(private rockBandsService: RockBandsService) { }
 
   ngOnInit(): void {
+    this.rockBandsService.getAll()
+      .then(rockBands => {
+        this.arrRockBands = rockBands;
+      })
+      .catch(error => console.log(error));
   }
 
 }

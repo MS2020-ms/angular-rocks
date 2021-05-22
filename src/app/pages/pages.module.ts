@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -27,6 +28,7 @@ import { PagesComponent } from './pages.component';
   ],
 
   imports: [
+    BrowserModule,
     CommonModule,
     RouterModule,
     AppRoutingModule,

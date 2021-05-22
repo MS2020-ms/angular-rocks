@@ -6,7 +6,7 @@ import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
     {
-        path: 'dashboard',
+        path: 'list',
         component: PagesComponent,
         loadChildren: () => import('./child-routes.module').then(modulo => modulo.ChildRoutesModule)
     },

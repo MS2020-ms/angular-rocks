@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { RockBand, RockBandsService } from '../../services/rock-bands.service';
 
 @Component({
@@ -8,18 +9,17 @@ import { RockBand, RockBandsService } from '../../services/rock-bands.service';
 })
 export class DashboardComponent implements OnInit {
 
-  arrRockBands: RockBand[];
+  bandSelected: RockBand;
 
-  constructor(private rockBandsService: RockBandsService) { }
+  constructor(private activatedRoute: ActivatedRoute, private rockBandsService: RockBandsService) { }
 
   ngOnInit(): void {
 
-    this.rockBandsService.getAll()
-      .then(rockBands => {
-        this.arrRockBands = rockBands;
-      })
-      .catch(error => console.log(error));
-
+    this.activatedRoute.params.subscribe(async params => {
+      console.log(params);
+      const bandId = parseInt(params.bandId);
+      this.bandSelected = await this.rockBandsService.getById(bandId);
+    });
   }
 
 }

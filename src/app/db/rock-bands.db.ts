@@ -4,7 +4,8 @@ import { RockBand } from '../services/rock-bands.service';
 
 export const ROCKBANDS: RockBand[] = [
     {
-        id: uuidv4(),
+        // id: uuidv4(),
+        id: 1,
         name: 'The Rolling Stones',
         members: [
             ' Mick Jagger',
@@ -16,10 +17,14 @@ export const ROCKBANDS: RockBand[] = [
         icon: "../../../assets/images/icons/RS_icon.jpg",
         country: 'United Kingdom',
         web: 'https://rollingstones.com/',
-        active: true
+        active: true,
+        origin: 'London, England',
+        genres: 'Rock, blues, hard rock, rock and roll, pop',
+        years: '1962–present'
+
     },
     {
-        id: uuidv4(),
+        id: 2,
         name: 'Led Zeppelin',
         members: [
             ' Jimmy Page',
@@ -31,10 +36,13 @@ export const ROCKBANDS: RockBand[] = [
         icon: "../../../assets/images/icons/LZ_icon.jpg",
         country: 'United Kingdom',
         web: 'https://www.ledzeppelin.com',
-        active: false
+        active: false,
+        origin: 'London, England',
+        genres: 'Hard rock, blues rock, folk rock, heavy metal',
+        years: '1968–1980'
     },
     {
-        id: uuidv4(),
+        id: 3,
         name: 'Queen',
         members: [
             ' Freddie Mercury',
@@ -46,10 +54,13 @@ export const ROCKBANDS: RockBand[] = [
         icon: "../../../assets/images/icons/RS_icon.jpg",
         country: 'United Kingdom',
         web: 'https://queenonline.com',
-        active: true
+        active: true,
+        origin: 'London, England',
+        genres: 'Rock',
+        years: '1970–present'
     },
     {
-        id: uuidv4(),
+        id: 4,
         name: 'Pink Floyd',
         members: [
             ' David Gilmour',
@@ -61,10 +72,13 @@ export const ROCKBANDS: RockBand[] = [
         icon: "../../../assets/images/icons/PF_icon.jpg",
         country: 'United Kingdom',
         web: 'https://www.pinkfloyd.com',
-        active: false
+        active: false,
+        origin: 'London, England',
+        genres: 'Progressive rock art, rock experimental, rock psychedelic, pop psychedelic rock',
+        years: '1965–1995'
     },
     {
-        id: uuidv4(),
+        id: 4,
         name: 'Deep Purple',
         members: [
             ' Ian Paice',
@@ -77,10 +91,13 @@ export const ROCKBANDS: RockBand[] = [
         icon: "../../../assets/images/icons/DP_icon.jpg",
         country: 'United Kingdom',
         web: 'https://deeppurple.com/',
-        active: true
+        active: true,
+        origin: 'Hertford, Hertfordshire, England',
+        genres: 'Hard rockheavy, metalprogressive, rock',
+        years: '1968–present'
     },
     {
-        id: uuidv4(),
+        id: 4,
         name: 'AC/DC',
         members: [
             ' Angus Young',
@@ -93,10 +110,13 @@ export const ROCKBANDS: RockBand[] = [
         icon: "../../../assets/images/icons/acdc_icon.jpg",
         country: 'Australia',
         web: 'https://pwrup.acdc.com/',
-        active: true
+        active: true,
+        origin: 'Sydney, New South Wales, Australia',
+        genres: 'Hard rock, blues rock, heavy metal, rock and roll',
+        years: '1973–present'
     },
     {
-        id: uuidv4(),
+        id: 7,
         name: 'The Ramones',
         members: [
             ' Joey Ramone',
@@ -109,10 +129,13 @@ export const ROCKBANDS: RockBand[] = [
         icon: "../../../assets/images/icons/TR_icon.jpg",
         country: 'United States',
         web: 'https://www.ramones.com/',
-        active: false
+        active: false,
+        origin: 'Queens, New York, United States',
+        genres: 'Punk rock, pop punk',
+        years: '1974–1996'
     },
     {
-        id: uuidv4(),
+        id: 8,
         name: 'KISS',
         members: [
             ' Paul Stanley',
@@ -124,7 +147,10 @@ export const ROCKBANDS: RockBand[] = [
         icon: "../../../assets/images/icons/K_icon.jpg",
         country: 'United States',
         web: 'https://www.kissonline.com/end-of-the-road-au',
-        active: true
+        active: true,
+        origin: 'New York City, United States',
+        genres: 'Hard rock, heavy metal, shock rock, glam metal',
+        years: '1973–present'
     }
 
 ]

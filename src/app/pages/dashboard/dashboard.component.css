@@ -1,22 +1,36 @@
-.bands{
+.band-card{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 2rem;
 }
-.band{
+.card{
  width: 300px;
  border: 1px solid lightgrey; 
  padding: 10px; 
  margin: 10px;
- cursor: pointer;
  border-radius: 20px;
  box-shadow: 5px 6px 8px 1px lightgrey;
 }
-.band img{
-    width: 100%;
-    height: 8rem;
+.card p{
+    margin-bottom: 0%;
 }
 .band-name{
     text-align: center;
-    /* font-weight: bold; */
+}
+img{
+    margin-bottom: 2rem;
+}
+.country{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding-left: 1.5rem;
+    height: 50px;
+}
+.country p{
+    margin: 0%;
+}
+.country img{
+    margin: 0%;
 }
