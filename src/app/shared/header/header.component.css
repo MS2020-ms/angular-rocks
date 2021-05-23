@@ -12,6 +12,9 @@
     color:#212121;
     font-weight:100;
   }
+  .pointer{
+    cursor: pointer;
+  }
   .spacer {
     padding: 10px 0;
    }
@@ -20,6 +23,7 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 500;
+    margin-bottom: 0;
   }
   .menu-4 * {
     box-sizing: border-box;

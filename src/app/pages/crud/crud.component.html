@@ -22,7 +22,8 @@
 
                 <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario.value)">
                     <div class="form-group">
-                        <input type="text" name="nombre" placeholder={{selectedBand.name}} class="form-control" ngModel>
+                        <!-- insert in input placeholder={{selectedBand.name}} -->
+                        <input type="text" name="nombre" class="form-control" ngModel>
                     </div>
                     <input type="submit" value="Edit" class="btn btn-info">
                 </form>

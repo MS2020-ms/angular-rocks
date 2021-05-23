@@ -26,7 +26,6 @@ export class CrudComponent implements OnInit {
     // this.arrFromService = this.shareService.getArray();
     // console.log(this.arrFromService);
 
-
     this.rockBandsService.getAll()
       .then(rockBands => {
         this.crudList = rockBands;

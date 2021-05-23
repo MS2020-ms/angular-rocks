@@ -2,8 +2,8 @@
     <div class="col-12">
 
         <div class="card-body search">
-            <input type="text" id="input" class="form-control" placeholder="Search a Band...[case-sensitive]"
-                #txtTermino (keyup)="buscar(txtTermino.value)" />
+            <input type="text" id="input" class="form-control" placeholder="Search a Band" #txtTermino
+                (keyup)="buscar(txtTermino.value)" />
         </div>
 
     </div>
@@ -16,7 +16,7 @@
             <h2 class="band-name">{{band.name}}</h2>
         </div>
 
-        <img [src]="band.img" [routerLink]="['/list', band.id]">
+        <img [src]="band.img" title="Click me! For more info about the Band" [routerLink]="['/list', band.id]">
         <!--<p>{{band.id}}</p> -->
     </div>
 </div>
