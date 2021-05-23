@@ -4,9 +4,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
 
-//Modules
-
-
 //Components
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Error404Component } from './error404/error404.component';
@@ -14,6 +11,7 @@ import { ListComponent } from './list/list.component';
 import { PagesComponent } from './pages.component';
 import { AddBandComponent } from './add-band/add-band.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CrudComponent } from './crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     Error404Component,
     ListComponent,
     AddBandComponent,
+    CrudComponent,
     PagesComponent
   ],
 
@@ -28,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     Error404Component,
     AddBandComponent,
+    CrudComponent,
     PagesComponent
   ],
 

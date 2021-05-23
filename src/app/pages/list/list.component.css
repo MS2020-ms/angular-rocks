@@ -36,3 +36,8 @@
 .band-title .fas:hover{
     color:red;
 }
+.search{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}

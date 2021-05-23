@@ -86,7 +86,7 @@ export const ROCKBANDS: RockBand[] = [
         video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     },
     {
-        id: 4,
+        id: 5,
         name: 'Deep Purple',
         members: [
             ' Ian Paice',
@@ -107,7 +107,7 @@ export const ROCKBANDS: RockBand[] = [
         video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     },
     {
-        id: 4,
+        id: 6,
         name: 'AC/DC',
         members: [
             ' Angus Young',

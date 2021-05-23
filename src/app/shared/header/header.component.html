@@ -2,10 +2,11 @@
     <div class="spacer"></div>
     <nav class="header">
         <ul class="menu-4">
+            <img src="../../../assets/images/icon/klipartz.com.png" alt="rock and roll logo" width="70" class="pb-3">
             <li class="current"><a [routerLink]="['']" data-hover="List">List</a></li>
             <li><a [routerLink]="['new']" data-hover="Add Band">Add Band</a></li>
-            <li><a href="#" data-hover="Edit">Edit</a></li>
-            <li><a href="#" data-hover="Delete">Delete</a></li>
+            <li><a [routerLink]="['crud']" data-hover="Delete">Delete</a></li>
+            <li><a [routerLink]="['crud']" data-hover="Edit">Edit</a></li>
             <li><a (click)="scrollToElement('contact')" data-hover="Contact">Contact</a></li>
         </ul>
     </nav>
