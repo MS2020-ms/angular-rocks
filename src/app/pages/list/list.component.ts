@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RockBand, RockBandsService } from '../../services/rock-bands.service';
 import { SearchService } from '../../services/search.service';
+import { ShareService } from '../../services/share.service';
 
 @Component({
   selector: 'app-list',
@@ -9,9 +10,9 @@ import { SearchService } from '../../services/search.service';
 })
 export class ListComponent implements OnInit {
 
-  arrRockBands: RockBand[];
+  public arrRockBands: RockBand[];
 
-  constructor(private rockBandsService: RockBandsService, private searchsService: SearchService) { }
+  constructor(private rockBandsService: RockBandsService, private searchsService: SearchService, private shareService: ShareService) { }
 
   ngOnInit(): void {
     this.rockBandsService.getAll()
@@ -19,6 +20,9 @@ export class ListComponent implements OnInit {
         this.arrRockBands = rockBands;
       })
       .catch(error => console.log(error));
+
+    //Array from list-component shared by share.service:
+    // this.sendArray(this.arrRockBands);
   }
 
   buscar(termino: string) {
@@ -40,16 +44,10 @@ export class ListComponent implements OnInit {
 
   }
 
-  onClick(pId) {
-
-    alert("Are you sure?\nYou won't be able to revert this!");
-
-    for (let i = 0; i < this.arrRockBands.length; i++) {
-      if (this.arrRockBands[i].id === pId) {
-        this.arrRockBands.splice(i, 1);
-      }
-    }
-  }
+  //Array from list-component shared by share.service:
+  // sendArray(arrRockBands: RockBand[]) {
+  //   this.shareService.setArray(arrRockBands);
+  // }
 
 
 }

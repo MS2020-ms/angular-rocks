@@ -30,12 +30,6 @@
     text-align: center;
     /* font-weight: bold; */
 }
-.band-title .fas{
-    color:gray;
-}
-.band-title .fas:hover{
-    color:red;
-}
 .search{
     width: 85%;
     margin-left: auto;

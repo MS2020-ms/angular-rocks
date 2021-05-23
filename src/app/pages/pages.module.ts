@@ -10,7 +10,7 @@ import { Error404Component } from './error404/error404.component';
 import { ListComponent } from './list/list.component';
 import { PagesComponent } from './pages.component';
 import { AddBandComponent } from './add-band/add-band.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CrudComponent } from './crud/crud.component';
 
 @NgModule({
@@ -37,6 +37,7 @@ import { CrudComponent } from './crud/crud.component';
     RouterModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule
   ]
 })
 

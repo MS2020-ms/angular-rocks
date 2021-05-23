@@ -1,19 +1,35 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8 mb-4">
+
+            <!-- Array from list-component shared by share.service: -->
+            <!-- <div *ngFor="let item of arrFromService">
+                <p>{{item.name}}</p>
+                <p>{{item.country}}</p>
+            </div> -->
+            <h3 class="title">Delete a Band:</h3>
             <ul class="list-group">
 
-            </ul>
-            <div class="card mt-3">
-                <div class="card-body">
-                    <div class="card-title">
-                        Insert a new Band
+                <li class="list-group-item list-group-item-action" *ngFor="let item of crudList"
+                    (click)="openForEdit(item)">
+                    <div class="d-flex justify-content-between">
+                        <span class="badge-css ">{{item.id}}</span>
+                        <div class="pointer">{{item.name}}</div>
+                        <i class="fas fa-times pointer" (click)="onClick(item.id)"></i>
                     </div>
-                </div>
-            </div>
+                </li>
+                <h3 class="title mt-2">Edit a Band Name:</h3>
+
+                <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario.value)">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder={{selectedBand.name}} class="form-control" ngModel>
+                    </div>
+                    <input type="submit" value="Edit" class="btn btn-info">
+                </form>
+            </ul>
         </div>
         <div class="col-md-4">
-            <img src="../../../assets/images/icon/rock-roll.jpg" alt="rock and roll logo" width="200">
+            <img src="../../../assets/images/icon/rock-roll.jpg" alt="rock and roll logo" width="150">
         </div>
     </div>
 </div>
