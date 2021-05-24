@@ -22,6 +22,8 @@ export interface RockBand {
 })
 export class RockBandsService {
 
+
+
   constructor() { }
 
   getAll(): Promise<RockBand[]> {
@@ -36,8 +38,6 @@ export class RockBandsService {
     });
   }
 
-  addBand(pBand: RockBand) {
 
-  }
 
 }

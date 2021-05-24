@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { RockBand, RockBandsService } from '../../services/rock-bands.service';
 import { SearchService } from '../../services/search.service';
 import { ShareService } from '../../services/share.service';
@@ -12,6 +13,8 @@ export class ListComponent implements OnInit {
 
   public arrRockBands: RockBand[];
 
+  // subscription: Subscription;
+
   constructor(private rockBandsService: RockBandsService, private searchsService: SearchService, private shareService: ShareService) { }
 
   ngOnInit(): void {
@@ -20,6 +23,10 @@ export class ListComponent implements OnInit {
         this.arrRockBands = rockBands;
       })
       .catch(error => console.log(error));
+
+    this.shareService.getBands$().subscribe(band => {
+      this.arrRockBands.push(band);
+    })
 
     //Array from list-component shared by share.service:
     // this.sendArray(this.arrRockBands);
@@ -48,6 +55,5 @@ export class ListComponent implements OnInit {
   // sendArray(arrRockBands: RockBand[]) {
   //   this.shareService.setArray(arrRockBands);
   // }
-
 
 }
