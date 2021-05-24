@@ -45,7 +45,11 @@ export class CrudComponent implements OnInit {
   }
 
   openForEdit(band: RockBand) {
-    this.selectedBand = band;
+    document.getElementById('name')["value"] = band.name;
+    document.getElementById('country')["value"] = band.country;
+    document.getElementById('members')["value"] = band.members;
+    document.getElementById('years')["value"] = band.years;
+    document.getElementById('web')["value"] = band.web;
   }
 
   onSubmit(formValues) {
