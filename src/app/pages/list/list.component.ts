@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { RockBand, RockBandsService } from '../../services/rock-bands.service';
 import { SearchService } from '../../services/search.service';
 import { ShareService } from '../../services/share.service';
@@ -12,8 +11,6 @@ import { ShareService } from '../../services/share.service';
 export class ListComponent implements OnInit {
 
   public arrRockBands: RockBand[];
-
-  // subscription: Subscription;
 
   constructor(private rockBandsService: RockBandsService, private searchsService: SearchService, private shareService: ShareService) { }
 

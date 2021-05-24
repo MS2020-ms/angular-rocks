@@ -6,7 +6,7 @@ import { ListComponent } from './list/list.component';
 
 
 const childRoutes: Routes = [
-  //para enviar parametros o argumentos por la ruta -> propiedad 'data'
+  //to send parameters or arguments along the path  -> propiedad 'data'
   { path: '', component: ListComponent, data: { titulo: 'List' } },
   { path: ':bandId', component: DashboardComponent, data: { titulo: 'Detail' } },
 

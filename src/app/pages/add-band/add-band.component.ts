@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { RockBandsService } from '../../services/rock-bands.service';
 import { ShareService } from '../../services/share.service';
 // import { v4 as uuidv4 } from 'uuid';
@@ -13,15 +14,15 @@ export class AddBandComponent implements OnInit {
 
   formulario: FormGroup;
 
-  constructor(private rockBandsService: RockBandsService, private shareService: ShareService) {
+  constructor(private rockBandsService: RockBandsService, private shareService: ShareService, private router: Router) {
 
     this.formulario = new FormGroup({
       // id: uuidv4(),
-      id: new FormControl(''),
+      id: new FormControl('0'),
       name: new FormControl('', [Validators.required]),
       members: new FormControl(''),
-      img: new FormControl(''),
-      icon: new FormControl(''),
+      img: new FormControl('../../../assets/images/default/no-image.png'),
+      // icon: new FormControl(''),
       country: new FormControl(''),
       web: new FormControl(''),
       active: new FormControl(''),
@@ -29,7 +30,7 @@ export class AddBandComponent implements OnInit {
       genres: new FormControl(''),
       years: new FormControl(''),
       description: new FormControl(''),
-      video: new FormControl(''),
+      // video: new FormControl(''),
     });
 
   }
@@ -41,6 +42,9 @@ export class AddBandComponent implements OnInit {
     // console.log(this.formulario.value);
     this.shareService.addBand(this.formulario.value);
     this.formulario.reset();
+    alert('New Band added!');
+    this.router.navigate(['']);
+
   }
 
 }

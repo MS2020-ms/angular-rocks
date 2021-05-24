@@ -5,8 +5,14 @@
             <h3 class="title">Add a new Band:</h3>
 
             <div class="form-group m-3">
+                <input type="hidden" class="form-control shadow-sm p-1 bg-white rounded" formControlName="id">
+            </div>
+            <div class="form-group m-3">
                 <input type="text" class="form-control shadow-sm p-1 bg-white rounded" formControlName="name"
-                    placeholder="Band name">
+                    placeholder="Band name [required]">
+                <p class="text-danger"
+                    *ngIf="formulario.get('name').hasError('required') && formulario.get('name').touched">
+                    This field is required</p>
             </div>
 
             <div class="form-group m-3">
@@ -18,11 +24,11 @@
                 <input type="file" class="form-control shadow-sm p-1 bg-white rounded" formControlName="img"
                     title="Choose a video please">
             </div>
-            <label class="label">Band icon:</label>
+            <!-- <label class="label">Band icon:</label>
             <div class="form-group m-3">
                 <input type="file" class="form-control shadow-sm p-1 bg-white rounded" formControlName="icon"
                     placeholder="Band icon">
-            </div>
+            </div> -->
             <div class="form-group m-3">
                 <input type="text" class="form-control shadow-sm p-1 bg-white rounded" formControlName="country"
                     placeholder="Band country">
@@ -47,12 +53,12 @@
                 <input type="text" class="form-control shadow-sm p-1 bg-white rounded" formControlName="description"
                     placeholder="Band short description">
             </div>
-            <div class="form-group m-3">
+            <!-- <div class="form-group m-3">
                 <input type="text" class="form-control shadow-sm p-1 bg-white rounded" formControlName="video"
                     placeholder="Band video (url)">
-            </div>
+            </div> -->
 
-            <input type="submit" class="btn btn-block btn-info mb-3 " value="Enviar">
+            <input type="submit" class="btn btn-block btn-info mb-3 " value="Enviar" [disabled]="!formulario.valid">
         </form>
 
     </div>

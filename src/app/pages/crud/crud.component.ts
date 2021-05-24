@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import { RockBand, RockBandsService } from '../../services/rock-bands.service';
 import { ShareService } from '../../services/share.service';
 
@@ -45,6 +44,7 @@ export class CrudComponent implements OnInit {
   }
 
   openForEdit(band: RockBand) {
+
     document.getElementById('name')["value"] = band.name;
     document.getElementById('country')["value"] = band.country;
     document.getElementById('members')["value"] = band.members;

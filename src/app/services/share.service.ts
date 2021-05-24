@@ -7,8 +7,6 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 })
 export class ShareService {
 
-  // private addedBandSource = new Subject<RockBand>();
-  // public addedBand$ = this.addedBandSource.asObservable();
 
   private newBands: RockBand;
   private newBands$: Subject<RockBand>;
@@ -21,7 +19,6 @@ export class ShareService {
   }
 
   setArray(array: RockBand[]) {
-    // this.arrayFromService.push(array);
     this.arrayFromService = array;
   }
 
@@ -30,8 +27,6 @@ export class ShareService {
   }
 
   addBand(pBand: RockBand) {
-    // this.addedBandSource.next(pBand);
-    // this.newBands.push(pBand);
     this.newBands$.next(pBand);
   }
 
