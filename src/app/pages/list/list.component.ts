@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { RockBand, RockBandsService } from '../../services/rock-bands.service';
 import { SearchService } from '../../services/search.service';
 import { ShareService } from '../../services/share.service';
+import { take } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-list',
@@ -21,13 +23,15 @@ export class ListComponent implements OnInit {
       })
       .catch(error => console.log(error));
 
-    this.shareService.getBands$().subscribe(band => {
+    //.pipe(take(1)) = unsubscribe
+    this.shareService.getBands$().pipe(take(1)).subscribe(band => {
       this.arrRockBands.push(band);
     })
 
     //Array from list-component shared by share.service:
     // this.sendArray(this.arrRockBands);
   }
+
 
   buscar(termino: string) {
     //console.log(termino);
