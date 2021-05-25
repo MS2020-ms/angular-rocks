@@ -31,8 +31,6 @@ export class ListComponent implements OnInit {
     //Array from list-component shared by share.service:
     // this.sendArray(this.arrRockBands);
 
-    //Array from list-component shared by rock-bands.service:
-    // this.sendArray(this.arrRockBands);
   }
 
 
@@ -58,11 +56,6 @@ export class ListComponent implements OnInit {
   //Array from list-component shared by share.service:
   // sendArray(arrRockBands: RockBand[]) {
   //   this.shareService.setArray(arrRockBands);
-  // }
-
-  //Array from list-component shared by rock-bands.service:
-  // sendArray(arrRockBands: RockBand[]) {
-  //   this.rockBandsService.setArray(arrRockBands);
   // }
 
 }

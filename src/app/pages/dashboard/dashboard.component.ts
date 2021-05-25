@@ -11,7 +11,8 @@ export class DashboardComponent implements OnInit {
 
   bandSelected: RockBand;
 
-  constructor(private activatedRoute: ActivatedRoute, private rockBandsService: RockBandsService) { }
+  constructor(private activatedRoute: ActivatedRoute, private rockBandsService: RockBandsService) {
+  }
 
   ngOnInit(): void {
 
@@ -20,6 +21,7 @@ export class DashboardComponent implements OnInit {
       // Si bandId fuera number -> const bandId = parseInt(params.bandId);
       const bandId = params.bandId;
       this.bandSelected = await this.rockBandsService.getById(bandId);
+
     });
 
   }
