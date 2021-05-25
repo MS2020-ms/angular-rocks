@@ -1,10 +1,11 @@
-// import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import { RockBand } from '../services/rock-bands.service';
 
 export const ROCKBANDS: RockBand[] = [
     {
-        // id: uuidv4(),
-        id: 1,
+
+        // id: 1,
+        id: uuidv4(),
         name: 'Rolling Stones',
         members: [
             ' Mick Jagger',
@@ -25,7 +26,8 @@ export const ROCKBANDS: RockBand[] = [
 
     },
     {
-        id: 2,
+        // id: 2,
+        id: uuidv4(),
         name: 'Led Zeppelin',
         members: [
             ' Jimmy Page',
@@ -45,7 +47,8 @@ export const ROCKBANDS: RockBand[] = [
         video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     },
     {
-        id: 3,
+        // id: 3,
+        id: uuidv4(),
         name: 'Queen',
         members: [
             ' Freddie Mercury',
@@ -65,7 +68,8 @@ export const ROCKBANDS: RockBand[] = [
         video: '"https://www.youtube.com/embed/tgbNymZ7vqY"',
     },
     {
-        id: 4,
+        // id: 4,
+        id: uuidv4(),
         name: 'Pink Floyd',
         members: [
             ' David Gilmour',
@@ -85,7 +89,8 @@ export const ROCKBANDS: RockBand[] = [
         video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     },
     {
-        id: 5,
+        // id: 5,
+        id: uuidv4(),
         name: 'Deep Purple',
         members: [
             ' Ian Paice',
@@ -106,7 +111,8 @@ export const ROCKBANDS: RockBand[] = [
         video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     },
     {
-        id: 6,
+        // id: 6,
+        id: uuidv4(),
         name: 'AC/DC',
         members: [
             ' Angus Young',
@@ -127,7 +133,8 @@ export const ROCKBANDS: RockBand[] = [
         video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     },
     {
-        id: 7,
+        // id: 7,
+        id: uuidv4(),
         name: 'The Ramones',
         members: [
             ' Joey Ramone',
@@ -148,7 +155,8 @@ export const ROCKBANDS: RockBand[] = [
         video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     },
     {
-        id: 8,
+        // id: 8,
+        id: uuidv4(),
         name: 'KISS',
         members: [
             ' Paul Stanley',

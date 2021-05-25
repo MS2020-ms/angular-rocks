@@ -16,10 +16,12 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
 
     this.activatedRoute.params.subscribe(async params => {
-      console.log(params);
-      const bandId = parseInt(params.bandId);
+      // console.log(params);
+      // Si bandId fuera number -> const bandId = parseInt(params.bandId);
+      const bandId = params.bandId;
       this.bandSelected = await this.rockBandsService.getById(bandId);
     });
+
   }
 
 }

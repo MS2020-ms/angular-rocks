@@ -28,7 +28,8 @@ import { CrudComponent } from './crud/crud.component';
     Error404Component,
     AddBandComponent,
     CrudComponent,
-    PagesComponent
+    PagesComponent,
+    ListComponent
   ],
 
   imports: [
